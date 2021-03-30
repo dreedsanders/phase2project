@@ -1,0 +1,6 @@
+<h1>Fitness Coaches</h1>
+<hr>
+
+<% @fitnesscoaches.each do |fitnesscoach| %>
+    <li> <%= link_to fitnesscoach.name, fitnesscoach %> </li>
+    <% end %>

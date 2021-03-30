@@ -1,0 +1,7 @@
+<h1>Members Index</h1>
+<hr>
+
+<% @members.each do |member| %>
+    <li><%= link_to member.name, member %></li>
+    <% end %>
+

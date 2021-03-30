@@ -1,0 +1,7 @@
+<h1>Training Sessions</h1>
+<hr>
+
+<% @trainingsessions.each do |session| %>
+    <li> <%= link_to session.name, session %> </li>
+    <% end %>
+
