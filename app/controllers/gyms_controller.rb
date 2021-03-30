@@ -1,4 +1,5 @@
 class GymsController < ApplicationController
+
   def index
     @gyms = Gym.all
     @members = Member.all
@@ -8,6 +9,7 @@ class GymsController < ApplicationController
   end
 
   def show
+    @gym = Gym.find(params[:id])
   end
 
 end
