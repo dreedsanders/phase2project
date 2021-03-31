@@ -1,4 +1,5 @@
 class WorkoutTypesController < ApplicationController
+  
   def index
     @workouttypes = WorkoutType.all
   end
@@ -34,7 +35,7 @@ class WorkoutTypesController < ApplicationController
 
   private
   def workout_type_params
-    params.require(@workouttype).permit(
+    params.require(:workouttype).permit(
       :member_id,
       :fitness_coach_id,
       :workout_type_id,

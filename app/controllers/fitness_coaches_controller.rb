@@ -35,7 +35,7 @@ class FitnessCoachesController < ApplicationController
 
   private
   def fitness_coach_params
-    params.require(@fitnesscoach).permit(
+    params.require(:fitnesscoach).permit(
       :name,
       :age,
       :gym_id

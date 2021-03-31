@@ -1,21 +1,8 @@
-<h1><%= @trainingsession.member.name %></h1>
+<h1><%= @trainingsession.name %>'s Training Session</h1>
 <hr>
 
-<h2><%= @trainingsession.member.name %>'s Fitness Coaches</h2>
-<ul style= "list-style-type: none;">
-    <% @trainingsession.member.fitness_coaches.each do |coach| %>
-        <li>
-            <%= coach.name %>
-        </li>
-    <% end %>
-</ul>
+<h2>Work Out:</h2>
+<%= @trainingsession.workout_type.name %>
 
-<h2><%= @trainingsession.member.name %>'s Work Outs</h2>
-<ul style= "list-style-type: none;">
-    <% @member.training_sessions.each do |session| %>
-        <li>
-            <%= session.workout_type.name %>
-        </li>
-    <% end %>
-</ul>
-
+<h2>Gym:</h2>
+<%= @trainingsession.gym.name %>

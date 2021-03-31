@@ -35,7 +35,7 @@ class MembersController < ApplicationController
 
   private
   def member_params
-    params.require(@member).permit(
+    params.require(:member).permit(
       :name,
       :age,
       :gym_id

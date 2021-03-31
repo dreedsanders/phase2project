@@ -1,2 +1,16 @@
-<h1>FitnessCoaches#show</h1>
-<p>Find me in app/views/fitness_coaches/show.html.erb</p>
+<h1>Coach <%= @fitnesscoach.name %></h1>
+<hr>
+
+<h2>Coach <%= @fitnesscoach.name %>'s Age</h2>
+<ul style= "list-style-type: none;">
+    <%= @fitnesscoach.age %>
+</ul>
+
+<h2> Coach <%= @fitnesscoach.name %>'s Current Sessions</h2>
+<ul style= "list-style-type: none;">
+    <% @fitnesscoach.training_sessions.each do |session| %>
+        <li>
+            <%= session.member.name %> for <%= session.workout_type.name %>
+        </li>
+    <% end %>
+</ul>

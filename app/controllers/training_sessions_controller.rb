@@ -36,7 +36,7 @@ class TrainingSessionsController < ApplicationController
 
   private
   def training_session_params
-    params.require(@training_session).permit(
+    params.require(:training_session).permit(
       :member_id,
       :fitness_coach_id,
       :workout_type_id,
