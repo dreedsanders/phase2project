@@ -14,6 +14,8 @@ Gym.destroy_all
 WorkoutType.destroy_all 
 
 g1 = Gym.create(name: "Lozanos")
+g2 = Gym.create(name: "All You Can Eat")
+g3 = Gym.create(name: "Order From The Couch")
 
 f1 = FitnessCoach.create(name: "Luis", age: 29, gym: g1)
 f2 = FitnessCoach.create(name: "Triston", age: 28, gym: g1)

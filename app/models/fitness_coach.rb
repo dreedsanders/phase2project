@@ -6,16 +6,15 @@ class FitnessCoach < ApplicationRecord
     def num_arms
         self.training_sessions.select {|session| session.workout_type.name == "Arms"}.length
     end
+
     def self.strong_arm
         FitnessCoach.all.max_by {|coach| coach.num_arms}
     end
 
-
-    
     def num_legs
         self.training_sessions.select {|session| session.workout_type.name == "Legs"}.length
-
     end
+
     def self.bug_squasher 
         FitnessCoach.all.max_by {|coach| coach.num_legs}
     end
@@ -23,6 +22,7 @@ class FitnessCoach < ApplicationRecord
     def sess_coach
         self.training_sessions.count
     end
+
     def self.mvp
         FitnessCoach.all.max_by {|coach| coach.sess_coach}
 
@@ -44,14 +44,6 @@ class FitnessCoach < ApplicationRecord
     def self.yute_buck
         buck = FitnessCoach.all.each{|coach| coach.age}.min
         "#{buck.name} is our yute with some muscle!"
-     end
-
-   
-
-
-
-
-
-
-
+    end
+    
 end
