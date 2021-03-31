@@ -9,18 +9,6 @@ class TrainingSession < ApplicationRecord
         self.member.name + (" & ") + self.fitness_coach.name
     end
 
-    def member_mvp
-        #member with most sessions
-    end
-
-    def trainer_mvp
-        #trainer with most sessions
-    end
-
-    def fav_workout
-        #workout type with most sessions
-    end
-
 
 
 end
