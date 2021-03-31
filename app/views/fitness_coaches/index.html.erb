@@ -4,3 +4,5 @@
 <% @fitnesscoaches.each do |fitnesscoach| %>
     <li> <%= link_to fitnesscoach.name, fitnesscoach %> </li>
     <% end %>
+
+    <%= button_to "create fitness coach", '/fitness_coaches/new', method: :get%>

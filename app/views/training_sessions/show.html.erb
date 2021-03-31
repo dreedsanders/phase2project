@@ -2,7 +2,7 @@
 <hr>
 
 <h2>Work Out:</h2>
-<%= @trainingsession.workout_type.name %>
+<%= link_to @trainingsession.workout_type.name, @trainingsession.workout_type  %>
 
 <h2>Gym:</h2>
-<%= @trainingsession.gym.name %>
+<%= link_to @trainingsession.gym.name, @trainingsession.gym %>

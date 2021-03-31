@@ -1,2 +1,17 @@
-<h1>TrainingSessions#new</h1>
-<p>Find me in app/views/training_sessions/new.html.erb</p>
+<h1>New Training Session</h1>
+
+
+<%= form_with model: @trainingsession do |f| %>
+    <%= f.label :Member %>
+    <%= f.collection_select(:member_id, @members, :id, :name) %><br><br>
+    <%= f.label :Coach %>
+    <%= f.collection_select(:fitness_coach_id, @coaches, :id, :name) %><br><br>
+    <%= f.label :Workout %>
+    <%= f.collection_select(:workout_type_id, @workout, :id, :name) %><br><br>
+    <%= f.label :Gym %>
+    <%= f.collection_select(:gym_id, @gym, :id, :name) %><br><br>
+
+    <%= f.submit %>
+    <% end %>
+    
+

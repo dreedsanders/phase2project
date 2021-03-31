@@ -1,2 +1,14 @@
-<h1>Members#edit</h1>
-<p>Find me in app/views/members/edit.html.erb</p>
+<h1>Edit <%="#{@member.name}" %> </h1>
+<hr>
+
+<%= form_with model: @member do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+    <%= f.label :age %>
+    <%= f.number_field :age %><br><br>
+    <%= f.label :gym_id %>
+    <%= f.collection_select(:gym_id, @gyms, :id, :name) %><br><br>
+    <%= f.submit %>
+    <% end %>
+    
+
