@@ -4,12 +4,12 @@ class Member < ApplicationRecord
     belongs_to :gym 
 
     def sess_mem
+        #### on member show page, show number of sessions ####
         self.training_sessions.count
     end
     def self.most_liked_member
+        ### on members index it shows who has most sessions ###
         Member.all.max_by {|member| member.sess_mem}
-
-        #member with most sessions
     end
 
 
@@ -18,11 +18,13 @@ class Member < ApplicationRecord
         #array of coaches theyve worked out with
     end
     def self.best_pair
+        ### on members and/or coaches index to show the most often paired group ###
         Member.all.max_by {|member| member.liked_coach}
      
     end
 
     def self.the_wisest 
+        ### on member index this shows the oldest member of the gym ###
         count = 0
         wisest =[]
         Member.all.each do |member|
@@ -35,6 +37,8 @@ class Member < ApplicationRecord
     end
 
     def self.young_buck
+                ### on member index this shows the youngest member of the gym ###
+
        buck = Member.all.each{|member| member.age}.min
        "#{buck.name} is our youngest buck with some muscle to fill in!"
     end

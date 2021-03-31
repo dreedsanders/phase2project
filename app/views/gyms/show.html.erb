@@ -1,2 +1,26 @@
-<h1>Gyms#show</h1>
-<p>Find me in app/views/gyms/show.html.erb</p>
+<h1><%= @gym.name %></h1>
+<hr>
+<h2>Meet our Members:</h2>
+<ul style="list-style-type: none;">
+    <% @gym.members.each do |names| %>
+        <li>
+            <%= link_to names.name, names %>
+        </li>
+    <% end %>
+</ul>
+<h2>Meet our Coaches:</h2>
+<ul style="list-style-type: none;">
+    <% @gym.fitness_coaches.each do |names| %>
+        <li>
+            <%= link_to names.name, names %>
+        </li>
+    <% end %>
+</ul>
+<h2>See our Workouts:</h2>
+<ul style="list-style-type: none;">
+    <% @gym.workout_types.each do |names| %>
+        <li>
+            <%= link_to names.name, names %>
+        </li>
+    <% end %>
+</ul>

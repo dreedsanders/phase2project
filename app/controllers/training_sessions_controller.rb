@@ -11,10 +11,14 @@ class TrainingSessionsController < ApplicationController
 
   def create
     @trainingsession = TrainingSession.create(training_session_params)
-    redirect_to trainingsession_path(@trainingsession)
+    redirect_to training_session_path(@trainingsession)
   end
 
   def new
+    @gym = Gym.all
+    @members = Member.all
+    @coaches = FitnessCoach.all 
+    @workout = WorkoutType.all
     @trainingsession = TrainingSession.new
   end
 
@@ -31,7 +35,7 @@ class TrainingSessionsController < ApplicationController
   def delete
     @trainingsession = TrainingSession.find(params[:id])
     @trainingsession.destroy
-    redirect_to trainingsession_path(@trainingsession)
+    redirect_to trainingsessions_path
   end
 
   private

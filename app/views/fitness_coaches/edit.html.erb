@@ -1,2 +1,13 @@
-<h1>FitnessCoaches#edit</h1>
-<p>Find me in app/views/fitness_coaches/edit.html.erb</p>
+<h1>FitnessCoaches</h1>
+<hr>
+
+<%= form_with model: @fitnesscoach do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+    <%= f.label :age %>
+    <%= f.number_field :age %><br><br>
+    <%= f.label :gym_id %>
+    <%= f.collection_select(:gym_id, @gyms, :id, :name) %><br><br>
+    <%= f.submit %>
+    <% end %>
+

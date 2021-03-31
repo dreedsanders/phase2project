@@ -1,3 +1,7 @@
-<h1><%= @gyms.first.name %></h1>
+<h1> Gyms </h1>
 <hr>
+
+<% @gyms.each do |gym| %>
+    <li><%= link_to gym.name, gym %> </li>
+    <% end %>
 

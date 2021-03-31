@@ -1,16 +1,20 @@
 <h1>Coach <%= @fitnesscoach.name %></h1>
 <hr>
 
-<h2>Coach <%= @fitnesscoach.name %>'s Age</h2>
+<h2> Age</h2>
 <ul style= "list-style-type: none;">
     <%= @fitnesscoach.age %>
 </ul>
 
-<h2> Coach <%= @fitnesscoach.name %>'s Current Sessions</h2>
+<h2> Current Sessions</h2>
 <ul style= "list-style-type: none;">
     <% @fitnesscoach.training_sessions.each do |session| %>
         <li>
-            <%= session.member.name %> for <%= session.workout_type.name %>
+            <%= link_to session.member.name, session.member %> for <%= link_to session.workout_type.name, session.workout_type %>
         </li>
     <% end %>
 </ul>
+
+<%= button_to "delete", @fitnesscoach, method: :delete %>
+
+<%= button_to "edit", edit_fitness_coach_path, method: :get %>
