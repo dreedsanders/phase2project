@@ -19,11 +19,9 @@ class FitnessCoachesController < ApplicationController
       redirect_to fitness_coach_path(@fitnesscoach)
     else
       flash[:errors] = @fitnesscoach.errors.full_messages
-      redirect_to new_member_path
+      redirect_to new_fitness_coach_path
     end
   end
-
-
 
   def edit
     @gyms = Gym.all
@@ -37,7 +35,12 @@ class FitnessCoachesController < ApplicationController
       age: params[:fitness_coach][:age],
       gym_id: params[:fitness_coach][:gym_id],
   })
-    redirect_to fitness_coach_path(@fitnesscoach)
+    if @fitnesscoach.valid?
+      redirect_to fitness_coach_path(@fitnesscoach)
+    else
+      flash[:errors] = @fitnesscoach.errors.full_messages
+      redirect_to new_fitness_coach_path
+    end
   end
 
   def destroy

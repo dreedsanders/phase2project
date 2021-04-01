@@ -1,8 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+
+<banner>
 <h1><%= @trainingsession.name %>'s Training Session</h1>
-<hr>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
 
-<h2>Work Out:</h2>
-<%= link_to @trainingsession.workout_type.name, @trainingsession.workout_type  %>
+<div>
+    <h2>Work Out:</h2>
+    <%= link_to @trainingsession.workout_type.name, @trainingsession.workout_type  %>
+</div>
 
-<h2>Gym:</h2>
-<%= link_to @trainingsession.gym.name, @trainingsession.gym %>
+<div>
+    <h2>Gym:</h2>
+    <%= link_to @trainingsession.gym.name, @trainingsession.gym %>
+</div>
+
+</body>
+
+</html>

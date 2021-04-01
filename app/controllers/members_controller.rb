@@ -42,7 +42,12 @@ class MembersController < ApplicationController
             age: params[:member][:age],
             gym_id: params[:member][:gym_id],
         })
-    redirect_to member_path(@member)
+        if @member.valid?
+          redirect_to member_path(@member)
+        else
+          flash[:errors] = @member.errors.full_messages
+          redirect_to new_member_path
+        end
   end
 
   def destroy

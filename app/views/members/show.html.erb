@@ -1,40 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Members</title>
+</head>
+
+<body>
+
+<banner>
 <h1><%= @member.name %></h1>
-<hr>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
 
-<p> Score <%= @score %> <p>
-
-<h2> Age</h2>
-<ul style= "list-style-type: none;">
-    <%= @member.age %>
-</ul>
-
-<h2> Gym</h2>
-<ul style= "list-style-type: none;">
-    <%= @member.gym.name %>
-</ul>
-
-<h2> Fitness Coaches</h2>
-<ul style= "list-style-type: none;">
-    <% @member.fitness_coaches.each do |coach| %>
+<div>
+<h2> Age </h2>
+    <ul style= "list-style-type: none;">
         <li>
-            <%= link_to coach.name, coach %>
+            <%= @member.age %>
         </li>
-    <% end %>
-</ul>
+    </ul>
+</div>
 
+<div>
+<h2> Gym </h2>
+    <ul style= "list-style-type: none;">
+        <%= @member.gym.name %>
+    </ul>
+</div>
+
+<div>
+<h2> Fitness Coaches </h2>
+    <ul style= "list-style-type: none;">
+        <% @member.fitness_coaches.each do |coach| %>
+            <li>
+                <%= link_to coach.name, coach %>
+            </li>
+        <% end %>
+    </ul>
+</div>
+
+<div>
 <h2> Training Sessions </h2>
+<<<<<<< HEAD
 <%= @member.name %> has <%= @member.sess_mem %> sessions. 
 
 
 <ul style= "list-style-type: none;">
+=======
+<h3><%= @member.name %> has <%= @member.sess_mem %> sessions.</h3>
+>>>>>>> fa0859c11854115430adfb175807d8a557d9f6d2
     <% @member.training_sessions.each do |session| %>
-        <li>
-             <%= link_to session.workout_type.name, session.workout_type %>  workout with <%= link_to session.fitness_coach.name, session.fitness_coach %> 
-        </li>
+        <ul style="list-style-type: none;">
+            <li>
+                <%= link_to session.workout_type.name, session.workout_type %>  workout with <%= link_to session.fitness_coach.name, session.fitness_coach %> 
+            </li>
+        </ul>
     <% end %>
-</ul>
+</div>
 
+<br>
 <%= button_to "create training session", new_training_session_path, method: :get %>
+<br>
 <%= button_to "delete", @member, method: :delete %>
+<<<<<<< HEAD
 <%= button_to "edit", edit_member_path, method: :get %>
 <%= button_to "log out", '/logout', method: :delete %>
+=======
+<br>
+<%= button_to "edit", edit_member_path, method: :get %>
+
+</body>
+
+</html>
+>>>>>>> fa0859c11854115430adfb175807d8a557d9f6d2

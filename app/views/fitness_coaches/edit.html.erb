@@ -1,6 +1,12 @@
 <h1>FitnessCoaches</h1>
 <hr>
 
+<ul style= "list-style-type: none; color: red; padding-left: 0; font-weight: bold;">
+    <li>
+        <%= flash[:errors] %>
+    </li>
+</ul>
+
 <%= form_with model: @fitnesscoach do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %><br><br>

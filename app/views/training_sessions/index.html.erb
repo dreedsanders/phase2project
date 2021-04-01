@@ -1,8 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Training Sessions</title>
+</head>
+
+<body>
+
+<banner>
 <h1>Training Sessions</h1>
 <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD3Ag-x-HS45yRXPzgBtcu7GT5KdPhverHxA&usqp=CAU" alt = "extra fries please">
 <hr>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
 
-<% @trainingsessions.each do |session| %>
-    <li> <%= link_to session.name, session %> </li>
-<% end %>
+<div>
+    <ul style= "list-style-type: none;">
+        <% @trainingsessions.each do |session| %>
+            <li>
+                <%= link_to session.name, session %>
+            </li>
+        <% end %>
+    </ul>
+</div>
+
+</body>
+
+</html>
 
