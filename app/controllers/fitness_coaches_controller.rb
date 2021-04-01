@@ -15,7 +15,12 @@ class FitnessCoachesController < ApplicationController
 
   def create
     @fitnesscoach = FitnessCoach.create(fitness_coach_params)
-    redirect_to fitness_coach_path(@fitnesscoach)
+    if @fitnesscoach.valid?
+      redirect_to fitness_coach_path(@fitnesscoach)
+    else
+      flash[:errors] = @fitnesscoach.errors.full_messages
+      redirect_to new_member_path
+    end
   end
 
 

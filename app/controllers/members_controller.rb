@@ -14,9 +14,13 @@ class MembersController < ApplicationController
   end
 
   def create
-    # byebug
     @member = Member.create(member_params)
-    redirect_to member_path(@member)
+      if @member.valid?
+        redirect_to member_path(@member)
+      else
+        flash[:errors] = @member.errors.full_messages
+        redirect_to new_member_path
+      end
   end
 
   def edit

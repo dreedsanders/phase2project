@@ -1,11 +1,6 @@
 <h1><%= @workouttype.name %></h1>
 <hr>
 
-<ul style="list-style-type: none; text-decoration: none;">
-<h1>Workout types</h1>
-
-<h1><%= @workouttype.name %></h1>
-<hr>
 <ul style="list-style-type: none;">
     <h2> See the current Training Sessions for this Work out! </h2>
     <% @workouttype.training_sessions.each do |obj| %>
@@ -30,4 +25,3 @@
                 <li>There are four main muscles in your arms - biceps, triceps, deltoids and brachioradialis. We make sure to work them all out for best results!</li>
             </ul>
         </div>
-</p>

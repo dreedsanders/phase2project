@@ -3,6 +3,8 @@ class FitnessCoach < ApplicationRecord
     has_many :members, through: :training_sessions
     belongs_to :gym
 
+    validates :name, uniqueness: true
+
     def num_arms
         ###on each coaches show page have a place for number of arm workouts ###
         self.training_sessions.select {|session| session.workout_type.name == "Arms"}.length

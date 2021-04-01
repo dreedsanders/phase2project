@@ -3,6 +3,8 @@ class Member < ApplicationRecord
     has_many :fitness_coaches, through: :training_sessions
     belongs_to :gym 
 
+    validates :name, uniqueness: true
+
     def sess_mem
         #### on member show page, show number of sessions ####
         self.training_sessions.count
