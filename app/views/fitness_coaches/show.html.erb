@@ -1,13 +1,11 @@
 <h1>Fitness Trainer <%= @fitnesscoach.name %></h1>
 <hr>
 
-<h2> <%= @fitnesscoach.name %>'s Age</h2>
 <h2> Age</h2>
 <ul style= "list-style-type: none;">
     <%= @fitnesscoach.age %>
 </ul>
 
-<h2> <%= @fitnesscoach.name %>'s Current Sessions</h2>
 <h2> Current Sessions</h2>
 <ul style= "list-style-type: none;">
     <% @fitnesscoach.training_sessions.each do |session| %>
@@ -17,7 +15,7 @@
     <% end %>
 </ul>
 
- <h2> <%= @fitnesscoach.name %> has coached <%= @fitnesscoach.num_arms %> arm sessions and <%= @fitnesscoach.num_legs %> leg sessions! </h2>
+ <h2> <%= @fitnesscoach.name %> has <%= @fitnesscoach.num_arms %> arm session(s)<br> and <%= @fitnesscoach.num_legs %> leg session(s)! </h2>
 
 <%= button_to "delete", @fitnesscoach, method: :delete %>
 

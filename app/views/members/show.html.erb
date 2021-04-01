@@ -21,6 +21,7 @@
 </ul>
 
 <h2> Training Sessions </h2>
+<%= @member.name %> has <%= @member.sess_mem %> sessions. 
 <ul style= "list-style-type: none;">
     <% @member.training_sessions.each do |session| %>
         <li>
