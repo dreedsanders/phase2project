@@ -5,4 +5,15 @@
     <li> <%= link_to fitnesscoach.name, fitnesscoach %> </li>
     <% end %>
 
+    <p>Lozano's Strong Arm(Coach with most arm workout sessions) <br>
+     <%= FitnessCoach.strong_arm.name%><p>
+
+     <p> Lozano's Bug Squasher(Coach with most leg workout sessions)<br>
+     <%= FitnessCoach.bug_squasher.name%><p>
+
+     <p> Lozano Coach Mvp(most scheduled)<br>
+     <%= FitnessCoach.mvp.name%><p>
+
+
+
     <%= button_to "create fitness coach", '/fitness_coaches/new', method: :get%>

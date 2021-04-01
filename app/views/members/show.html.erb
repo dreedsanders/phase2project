@@ -6,6 +6,11 @@
     <%= @member.age %>
 </ul>
 
+<h2> Gym</h2>
+<ul style= "list-style-type: none;">
+    <%= @member.gym.name %>
+</ul>
+
 <h2> Fitness Coaches</h2>
 <ul style= "list-style-type: none;">
     <% @member.fitness_coaches.each do |coach| %>
@@ -16,6 +21,7 @@
 </ul>
 
 <h2> Training Sessions </h2>
+<%= @member.name %> has <%= @member.sess_mem %> sessions. 
 <ul style= "list-style-type: none;">
     <% @member.training_sessions.each do |session| %>
         <li>

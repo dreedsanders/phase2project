@@ -5,4 +5,17 @@
     <li><%= link_to member.name, member %></li>
     <% end %>
 
+    <p> Our member with the most sessions: <br>
+    <%= Member.most_liked_member.name %> <p>
+
+
+    <%= Member.the_wisest %> <br>
+    <br>
+
+    <%= Member.young_buck %>
+
+    
+
+
+
     <%= button_to "create member", '/members/new', method: :get %>
