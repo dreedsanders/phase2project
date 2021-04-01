@@ -1,5 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+
+<banner>
 <h1>New Members Sign Up</h1>
-<hr>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
+
+<ul style= "list-style-type: none; color: red; padding-left: 0; font-weight: bold;">
+    <li>
+        <%= flash[:errors] %>
+    </li>
+</ul>
 
 <%= form_with model: @member do |f| %>
     <%= f.label :name %>
@@ -10,5 +35,8 @@
     <%= f.collection_select(:gym_id, @gyms, :id, :name) %><br><br>
     <%= f.submit %>
     <% end %>
+</body>
+
+</html>
     
 

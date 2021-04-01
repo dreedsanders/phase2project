@@ -1,8 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Members</title>
+</head>
+    
+<body>
+
+<banner>
 <h1>Members Index</h1>
-<hr>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
 
 <% @members.each do |member| %>
-    <li><%= link_to member.name, member %></li>
+    <p><%= link_to member.name, member %></p>
     <% end %>
 
     <p> Our member with the most sessions: <br>
@@ -19,3 +38,6 @@
 
 
     <%= button_to "create member", '/members/new', method: :get %>
+</body>
+    
+</html>

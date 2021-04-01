@@ -1,3 +1,37 @@
 // Place all the styles related to the fitness_coaches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
+}
+
+.ul {
+    list-style-type: none;
+}
+
+.li {
+    text-decoration: none;
+}

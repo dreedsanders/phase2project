@@ -1,5 +1,23 @@
-<h1>New Training Session</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
 
+<body>
+ 
+<banner>
+<h1>New Training Session</h1>
+    <nav>
+        <ul>
+            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li><%= link_to "Members", '/members', method: :get %></li>
+            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
+            <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
+        </ul>
+    </nav>
+</banner>
 
 <%= form_with model: @trainingsession do |f| %>
     <%= f.label :Member %>
@@ -13,5 +31,8 @@
 
     <%= f.submit %>
     <% end %>
+</body>
+
+</html>
     
 
