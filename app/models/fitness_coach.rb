@@ -58,3 +58,11 @@ class FitnessCoach < ApplicationRecord
     end
     
 end
+
+
+
+######html for fitness coach show page that has button to delete and edit####
+
+# <%= button_to "delete", @fitnesscoach, method: :delete %>
+
+# <%= button_to "edit", edit_fitness_coach_path, method: :get %>

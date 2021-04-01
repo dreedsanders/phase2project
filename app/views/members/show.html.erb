@@ -1,6 +1,8 @@
 <h1><%= @member.name %></h1>
 <hr>
 
+<p> Score <%= @score %> <p>
+
 <h2> Age</h2>
 <ul style= "list-style-type: none;">
     <%= @member.age %>
@@ -22,6 +24,8 @@
 
 <h2> Training Sessions </h2>
 <%= @member.name %> has <%= @member.sess_mem %> sessions. 
+
+
 <ul style= "list-style-type: none;">
     <% @member.training_sessions.each do |session| %>
         <li>
@@ -33,3 +37,4 @@
 <%= button_to "create training session", new_training_session_path, method: :get %>
 <%= button_to "delete", @member, method: :delete %>
 <%= button_to "edit", edit_member_path, method: :get %>
+<%= button_to "log out", '/logout', method: :delete %>

@@ -1,0 +1,9 @@
+<h1>Log in</h1>
+
+<%= form_with model: @member, url: login_path, method: :post do |f| %>
+    <%= f.label :Name %>
+    <%= f.text_field :name %><br><br>
+    <%= f.label :Password %>
+    <%= f.password_field :password %> <br><br>
+    <%= f.submit "Log in" %>
+    <% end %>

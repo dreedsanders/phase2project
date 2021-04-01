@@ -8,7 +8,11 @@
     <%= f.number_field :age %><br><br>
     <%= f.label :gym_id %>
     <%= f.collection_select(:gym_id, @gyms, :id, :name) %><br><br>
+    <%= f.label :Password %>
+    <%= f.password_field :password %> <br><br>
+    <%= f.label :Password_Confirmation %>
+    <%= f.password_field :password_confirmation %> <br><br>
     <%= f.submit %>
     <% end %>
     
-
+ 

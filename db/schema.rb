@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_230010) do
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.integer "age"
+    t.string "password_digest"
     t.integer "gym_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

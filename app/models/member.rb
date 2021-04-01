@@ -2,6 +2,7 @@ class Member < ApplicationRecord
     has_many :training_sessions
     has_many :fitness_coaches, through: :training_sessions
     belongs_to :gym 
+    has_secure_password
 
     validates :name, uniqueness: true
 
@@ -49,3 +50,11 @@ class Member < ApplicationRecord
 
 
 end
+
+# tried to make a form to push a button to keep score of workouts done
+# <%= form_with url: "/games", method: "post" do %>
+#     <%= label_tag :workout, "Type workout to complete a workout!" %><br><br>
+#     <%= text_field_tag :workout,  %><br><br>
+#     <% = submit_tag "Do Workout"  %>
+#     <% end %>
+
