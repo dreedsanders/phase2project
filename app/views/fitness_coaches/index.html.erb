@@ -11,7 +11,7 @@
 <h1>Fitness Coaches</h1>
     <nav>
         <ul>
-            <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
+            <li class="active"><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
             <li><%= link_to "Members", '/members', method: :get %></li>
             <li><%= link_to "Gyms", '/gyms', method: :get %></li>
             <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
@@ -21,12 +21,17 @@
 </banner>
 
 
+<div class="sidenav">
+<h2 style="color: rgb(8, 189, 23); text-align: center; font-size: 1.2em;">Our Coaches:</h2>
     <% @fitnesscoaches.each do |fitnesscoach| %>
-        <p>
+        <li>
             <%= link_to fitnesscoach.name, fitnesscoach %>
-        </p>
+        </li>
     <% end %>
+</div>
 
+
+<div class="main">
     <h2>--Fitness Coach Shoutouts--</h2>
 
     <p>Lozano's Strong Arm(Coach with most arm workout sessions) <br>
@@ -39,6 +44,7 @@
      <%= FitnessCoach.mvp.name%><p>
 
     <%= button_to "Create Fitness Coach", '/fitness_coaches/new', method: :get%>
+</div>    
 </body>
     
 </html>

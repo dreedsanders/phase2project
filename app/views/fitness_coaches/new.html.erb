@@ -20,11 +20,13 @@
     </nav>
 </banner>
 
-<ul style= "list-style-type: none; color: red; padding-left: 0; font-weight: bold;">
-    <li>
-        <%= flash[:errors] %>
-    </li>
-</ul>
+<div>
+    <ul style= "list-style-type: none; color: red; padding-left: 0; font-weight: bold;">
+        <li>
+            <%= flash[:errors] %>
+        </li>
+    </ul>
+</div>
 
 <%= form_with model: @fitnesscoach do |f| %>
     <%= f.label :name %>

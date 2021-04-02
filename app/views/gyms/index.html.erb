@@ -8,23 +8,29 @@
 
 <banner>
 <h1> Gyms </h1>
-<img src = "https://images-na.ssl-images-amazon.com/images/I/8121nnidPJL._AC_SL1500_.jpg" width = "300" height = "150" alt = "White Goodman">
-
-<hr>
     <nav>
         <ul>
             <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
             <li><%= link_to "Members", '/members', method: :get %></li>
-            <li><%= link_to "Gyms", '/gyms', method: :get %></li>
+            <li class="active"><%= link_to "Gyms", '/gyms', method: :get %></li>
             <li><%= link_to "Work Outs", '/workout_types', method: :get %></li>
             <li><%= link_to "Training Sessions", '/training_sessions', method: :get %></li>
         </ul>
     </nav>
 </banner>
 
-<% @gyms.each do |gym| %>
-    <p><%= link_to gym.name, gym %> </p>
-<% end %>
+<div class="sidenav">
+<h2 style="color: rgb(8, 189, 23); text-align: center; font-size: 1.2em;">Our Gyms:</h2>
+        <% @gyms.each do |gym| %>
+            <li>
+                <%= link_to gym.name, gym %>
+            </li>
+        <% end %>
+</div>
+
+<div class="main">
+<img src = "https://images-na.ssl-images-amazon.com/images/I/8121nnidPJL._AC_SL1500_.jpg" width = "300" height = "150" alt = "White Goodman">
+</div>
 </body>
 
 </html>

@@ -24,7 +24,7 @@ f3 = FitnessCoach.create(name: "Hadi", age: 27, gym: g1)
 f4 = FitnessCoach.create(name: "Ian", age: 36, gym: g1)
 f5 = FitnessCoach.create(name: "Regret", age: 31, gym: g1)
 
-m1 = Member.create(name: "Softie", age: 29,password: "123", gym: g1)
+m1 = Member.create(name: "Softie", age: 29, password: "123", gym: g1)
 m2 = Member.create(name: "Dopey", age: 25, password: "123", gym: g1)
 m3 = Member.create(name: "Big Lady", age: 40, password: "123", gym: g1)
 m4 = Member.create(name: "Moody", age: 31, password: "123", gym: g1)
