@@ -49,14 +49,7 @@
 
 <div>
 <h2> Training Sessions </h2>
-<<<<<<< HEAD
-<%= @member.name %> has <%= @member.sess_mem %> sessions. 
-
-
-<ul style= "list-style-type: none;">
-=======
 <h3><%= @member.name %> has <%= @member.sess_mem %> sessions.</h3>
->>>>>>> fa0859c11854115430adfb175807d8a557d9f6d2
     <% @member.training_sessions.each do |session| %>
         <ul style="list-style-type: none;">
             <li>
@@ -70,14 +63,10 @@
 <%= button_to "create training session", new_training_session_path, method: :get %>
 <br>
 <%= button_to "delete", @member, method: :delete %>
-<<<<<<< HEAD
 <%= button_to "edit", edit_member_path, method: :get %>
 <%= button_to "log out", '/logout', method: :delete %>
-=======
 <br>
-<%= button_to "edit", edit_member_path, method: :get %>
 
 </body>
 
 </html>
->>>>>>> fa0859c11854115430adfb175807d8a557d9f6d2
