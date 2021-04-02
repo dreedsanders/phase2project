@@ -37,4 +37,12 @@
     margin-left: 160px; /* Same as the width of the sidebar */
     padding: 0px 10px;
   }
+
+  div ul {
+    list-style-type: none;
+  }
   
+  div ul li a {
+    text-decoration: none;
+    color: rgb(8, 189, 23);
+  }

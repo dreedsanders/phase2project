@@ -21,7 +21,7 @@
 
 <div>
 <h2>Meet our Members:</h2>
-    <ul style="list-style-type: none;">
+    <ul>
         <% @gym.members.each do |names| %>
             <li>
                 <%= link_to names.name, names %>
@@ -32,7 +32,7 @@
 
 <div>
 <h2>Meet our Coaches:</h2>
-    <ul style="list-style-type: none;">
+    <ul>
         <% @gym.fitness_coaches.each do |names| %>
             <li>
                 <%= link_to names.name, names %>
@@ -43,7 +43,7 @@
 
 <div>
 <h2>See our Workouts:</h2>
-    <ul style="list-style-type: none;">
+    <ul>
         <% @gym.workout_types.each do |names| %>
             <li>
                 <%= link_to names.name, names %>
@@ -54,11 +54,17 @@
 
 <div>
 <h2>--Coach Shoutouts--</h2>
-<p> Who's got the oldest muscle? <br>
-<%= link_to FitnessCoach.oldest_muscle, FitnessCoach %> <p>
+    <ul>
+        <li>
+            <p> Who's got the oldest muscle? <br>
+            <%= link_to FitnessCoach.oldest_muscle, FitnessCoach %> <p>
+            <p> Who's the yute buck? <br>
+            <%= link_to FitnessCoach.yute_buck, FitnessCoach %> <p>
+        </li>
+    </ul>
+<div>
 
-<p> Who's the yute buck? <br>
-<%= link_to FitnessCoach.yute_buck, FitnessCoach %> <p>
+
 </div>
 
 </body>

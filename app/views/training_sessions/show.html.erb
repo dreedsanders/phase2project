@@ -21,12 +21,20 @@
 
 <div>
     <h2>Work Out:</h2>
-    <%= link_to @trainingsession.workout_type.name, @trainingsession.workout_type  %>
+    <ul>
+        <li>
+            <%= link_to @trainingsession.workout_type.name, @trainingsession.workout_type  %>
+        </li>
+    </ul>
 </div>
 
 <div>
     <h2>Gym:</h2>
-    <%= link_to @trainingsession.gym.name, @trainingsession.gym %>
+    <ul>
+        <li>
+            <%= link_to @trainingsession.gym.name, @trainingsession.gym %>
+        </li>
+    </ul>
 </div>
 
 </body>

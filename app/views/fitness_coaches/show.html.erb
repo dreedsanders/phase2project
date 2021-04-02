@@ -21,7 +21,7 @@
 
 <div>
     <h2> Age</h2>
-    <ul style="list-style-type: none;">
+    <ul>
         <li>
             <%= @fitnesscoach.age %>
         </li>
@@ -30,7 +30,7 @@
 
 <div>
     <h2> Current Sessions</h2>
-    <ul style= "list-style-type: none;">
+    <ul>
         <% @fitnesscoach.training_sessions.each do |session| %>
             <li>
                 <%= link_to session.member.name, session.member %> for <%= link_to session.workout_type.name, session.workout_type %>
