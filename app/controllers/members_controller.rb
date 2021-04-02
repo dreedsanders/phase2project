@@ -9,6 +9,7 @@ class MembersController < ApplicationController
 
   def show
     @score = session[:score]
+    # byebug
     # @member = Member.find(params[:id])
   end
 

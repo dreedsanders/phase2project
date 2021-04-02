@@ -7,7 +7,8 @@
 <body>
 
 <banner>
-<h1><%= @member.name %></h1>
+<h1><%= @member.name %></h1>
+
     <nav>
         <ul>
             <li><%= link_to "Fitness Coaches", '/fitness_coaches', method: :get %></li>
@@ -67,13 +68,17 @@
 </div>
 
 <br>
+<p> Score: <%= @score %></p>
+<%= form_with url: "/games", method: "post" do %>
+    <%= label_tag :workout, "Wanna workout?" %><br><br>
+    <%= text_field_tag :workout %> hint: type "workout"<br><br>
+    <%= submit_tag "Workout" %><br><br>
+  <% end %>
+<br>
 <%= button_to "create training session", new_training_session_path, method: :get %>
 <br>
 <%= button_to "delete", @member, method: :delete %>
-<<<<<<< HEAD
-=======
 <br>
->>>>>>> 31359eaccf0127b92b6e66dbdcb49f1e65d3b58f
 <%= button_to "edit", edit_member_path, method: :get %>
 <br>
 <%= button_to "log out", '/logout', method: :delete %>

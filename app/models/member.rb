@@ -23,9 +23,12 @@ class Member < ApplicationRecord
 
     def self.best_pair
         ### on members and/or coaches index to show the most often paired group ###
-        Member.all.max_by {|member| member.liked_coach}
-     
+        Member.all.map  do |member| 
+            " #{member.name} works out with #{member.liked_coach}"
+        end
     end
+
+
 
     def self.the_wisest 
         ### on member index this shows the oldest member of the gym ###

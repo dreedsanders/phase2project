@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :workout_types
   resources :training_sessions
   resources :members
-  resources :games, only: [:create]
+  resources :games
 
  get '/login', to: 'sessions#new'
  post 'login', to: 'sessions#create'
