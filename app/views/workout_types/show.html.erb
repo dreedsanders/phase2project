@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Work Outs</title>
+<title>Work Out Info</title>
 </head>
        
 <body>
@@ -20,19 +19,16 @@
     </nav>
 </banner>
 
-<div>
-    <ul style="list-style-type: none;">
-        <h2> See the current Training Sessions for this Work out! </h2>
-        <% @workouttype.training_sessions.each do |obj| %>
-            <li>
-                <%= link_to obj.name, obj %>
-            </li>
-        <% end %>
-    </ul>
+<div class= "sidenav">
+<h2 style="color: rgb(8, 189, 23); text-align: center; font-size: 1em;">Current Training Sessions for this Workout:</h2>
+    <% @workouttype.training_sessions.each do |obj| %>
+        <li>
+            <%= link_to obj.name, obj %>
+        </li>
+    <% end %>
 </div>
 
-<div>
-    <ul style="list-style-type: none;">
+<div class= "main">
         <h2>WHY SHOULD I TRAIN MY ARMS AND SHOULDERS?</h2>
         <li>If your goal is to improve muscle tone or strength in your arms and shoulders, there are a number of exercises you can do to work this area and reap the following benefits:</li>
         <br><br>
@@ -41,9 +37,6 @@
         <li><b>Muscle burns more calories than fat so strong, toned arms can help you achieve weight loss.</b> Arm exercises are also a fantastic way to strengthen and tone your core as your abdominal muscles engage when you perform the repetitions.</li>
         <li><b>Keeping your arms pumped up will also give you a healthy heart, according to the American Heart Association.</b> Plus, strength training can boost bone density and keep your bones healthy - which is particularly important as you get older.</li>
         <li><b>Arm exercises are one of the most flexible types of training</b> as you can tone your arms with little or no equipment whether you're at home, at the gym or even on holiday. Toned arms can also boost your confidence and encourage your to wear tops that show off your muscle definition.</li>
-        <br><br>
-        <li>There are four main muscles in your arms - biceps, triceps, deltoids and brachioradialis. We make sure to work them all out for best results!</li>
-    </ul>
 </div>
 
 </body>

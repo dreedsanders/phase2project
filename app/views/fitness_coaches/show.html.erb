@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Coaches</title>
+<title>Coach Info</title>
 </head>
 
 <body>
@@ -22,10 +21,15 @@
 
 <div>
     <h2> Age</h2>
-    <%= @fitnesscoach.age %>
+    <ul style="list-style-type: none;">
+        <li>
+            <%= @fitnesscoach.age %>
+        </li>
+    </ul>
 </div>
+
 <div>
-<h2> Current Sessions</h2>
+    <h2> Current Sessions</h2>
     <ul style= "list-style-type: none;">
         <% @fitnesscoach.training_sessions.each do |session| %>
             <li>
@@ -36,15 +40,13 @@
 <div>
 
 <div>
-    <h2><b> <%= @fitnesscoach.name %>'s stats:</h2>
+    <h2><%= @fitnesscoach.name %>'s stats:</h2>
     <ul>
         <h3><%= @fitnesscoach.num_arms %> arm session(s)<br>
         <%= @fitnesscoach.num_legs %> leg session(s)! </h3>
     </ul>
 </div>
 
-<<<<<<< HEAD
-=======
 <br>
 <%= button_to "Delete", @fitnesscoach, method: :delete %>
 <br>
@@ -52,4 +54,3 @@
 </body>
 
 </html>
->>>>>>> fa0859c11854115430adfb175807d8a557d9f6d2
